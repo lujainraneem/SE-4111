@@ -1,35 +1,39 @@
+package se4111;
 
 public class singletonLujain {
 	
-private static singleton ui;
+private static singletonLujain ui;
 	
-	private singleton() {
+	private singletonLujain() {
 		System.out.println("Lujain khalid Alduryhem");
 	}
 	
-	private int lujainConfig;
-	
-	public static singleton getiu() {
-				
+	public static singletonLujain getiu() {
+		
 		if (ui ==null) {
-			ui = new singleton();
+			ui = new singletonLujain();
 		}
 		return ui;		
 	}
 	
-/*
- * this function to set port number
- * @param port number
- * 
- * 	
- */
-    public void setConfig1(int con) {
-	    assert con>18
-	    lujainConfig=con;
-    }
+	
+	private int lujainAgeConfig;
+	
+	/*
+	 * Verify the age value entered
+	 * @param age is a value of user age
+	 * @return AgeOfUser is the number that entered by the user
+	 */
 
-    public int getConfig1() {
-    	return lujainConfig;
-    }
-
+	public void setLujainAgeConfig(int AgeOfUserConfig) {	
+		if(AgeOfUserConfig>18) {
+			this.lujainAgeConfig = AgeOfUserConfig;
+	           System.out.println("you'r allowd");
+	     }
+	}
+	
+	public int getLujainAgeConfig() {
+		return this.lujainAgeConfig;
+	}
+		
 }
